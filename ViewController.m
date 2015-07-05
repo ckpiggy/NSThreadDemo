@@ -133,10 +133,20 @@
     self.stop1Btn.enabled = YES;
 }
 
+- (IBAction)stop1:(UIButton *)sender {
+    [_thread1 cancel];
+}
+
+
 - (IBAction)thread2Start:(UIButton*)sender {
     sender.enabled = NO;
     [_thread2 start];
     self.stop2Btn.enabled = YES;
+}
+
+
+- (IBAction)stop2:(UIButton *)sender {
+    [_thread2 cancel];
 }
 
 
